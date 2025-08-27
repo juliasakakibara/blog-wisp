@@ -59,7 +59,7 @@ export default function BlotterText({
     animate(currentValue, targetValue, (value) => {
       materialRef.current.uniforms.uVolatility.value = value;
     });
-  }, [isHovered, alwaysOn, volatility, blotterError]);
+  }, [isHovered, alwaysOn, volatility, blotterError, animate]);
 
   // Efeito para inicialização
   useEffect(() => {

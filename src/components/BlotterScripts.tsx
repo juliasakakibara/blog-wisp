@@ -6,11 +6,11 @@ export function BlotterScripts() {
     <>
       <Script
         src="/blotter/build/blotter.min.js"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
       />
       <Script
         src="/blotter/materials/liquidDistortMaterial.js"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
       />
     </>
   );

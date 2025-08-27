@@ -3,8 +3,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import { Alert, AlertDescription } from "./ui/alert";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "./ui/button";
+import { Checkbox } from "./ui/checkbox";
 import {
   Form,
   FormControl,
@@ -12,9 +12,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "./ui/form";
 import { Input } from "./ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Textarea } from "./ui/textarea";
 import { useToast } from "../hooks/use-toast";
 import { AxiosError } from "axios";
 import { Shield } from "lucide-react";

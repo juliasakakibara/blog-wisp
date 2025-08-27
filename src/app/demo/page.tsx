@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 
 // Importação dinâmica para evitar problemas com SSR
 const BlotterText = dynamic(
@@ -134,12 +135,12 @@ export default function DemoPage() {
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               Experimente ajustar os controles acima para personalizar o efeito.
             </p>
-            <a
+            <Link
               href="/"
               className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
             >
               Voltar para o site
-            </a>
+            </Link>
           </div>
         </div>
       </div>

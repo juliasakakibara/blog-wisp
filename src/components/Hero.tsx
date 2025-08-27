@@ -47,10 +47,7 @@ export const Hero: FunctionComponent<HeroProps> = ({
               "tracking-[-0.02em] lg:tracking-[-0.03em]"
             )}>
               <span>
-                Hello, I'm freelancer Designer who codes with 4+ years experience — based{" "}
-              </span>
-              <span className="text-sm lg:text-base">
-                (for now)
+                Hello, I&apos;m freelancer Designer who codes with 4+ years experience — based{" "}
               </span>
               <span>
                 {" "}in Lalala blabla, working remotely.
