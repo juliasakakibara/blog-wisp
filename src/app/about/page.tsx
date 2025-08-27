@@ -1,7 +1,7 @@
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { config } from "@/config";
-import { signOgImageUrl } from "@/lib/og-image";
+import { Footer } from "../../components/Footer";
+import { Header } from "../../components/Header";
+import { config } from "../../config";
+import { signOgImageUrl } from "../../lib/og-image";
 import Markdown from "react-markdown";
 
 const content = `# About Me

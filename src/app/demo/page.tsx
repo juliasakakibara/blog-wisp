@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 
 // Importação dinâmica para evitar problemas com SSR
 const BlotterText = dynamic(
-  () => import('@/components/BlotterText'),
+  () => import('../../components/BlotterText'),
   { ssr: false, loading: () => <div>Carregando efeito...</div> }
 );
 

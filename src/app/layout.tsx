@@ -1,6 +1,6 @@
-import { config } from "@/config";
-import { signOgImageUrl } from "@/lib/og-image";
-import { cn } from "@/lib/utils";
+import { config } from "../config";
+import { signOgImageUrl } from "../lib/og-image";
+import { cn } from "../lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     images: [
       signOgImageUrl({
         title: config.blog.name,
-        width: config.seo.ogImageWidth,
-        height: config.seo.ogImageHeight,
+  // width: config.seo.ogImageWidth,
+  // height: config.seo.ogImageHeight,
       }),
     ],
   },
