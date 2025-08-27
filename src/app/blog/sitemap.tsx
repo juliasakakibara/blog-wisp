@@ -1,5 +1,5 @@
-import { config } from "@/config";
-import { wisp } from "@/lib/wisp";
+import { config } from "../../config";
+import { wisp } from "../../lib/wisp";
 import type { MetadataRoute } from "next";
 import urlJoin from "url-join";
 

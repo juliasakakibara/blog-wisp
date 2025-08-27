@@ -1,8 +1,8 @@
-import { BlogPostsPreview } from "@/components/BlogPostPreview";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { Badge } from "@/components/ui/badge";
-import { wisp } from "@/lib/wisp";
+import { BlogPostsPreview } from "../../../components/BlogPostPreview";
+import { Footer } from "../../../components/Footer";
+import { Header } from "../../../components/Header";
+import { Badge } from "../../../components/ui/badge";
+import { wisp } from "../../../lib/wisp";
 import { CircleX } from "lucide-react";
 import Link from "next/link";
 

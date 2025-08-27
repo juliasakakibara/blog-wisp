@@ -1,4 +1,4 @@
-import { config } from "@/config";
+import { config } from "../../config";
 import type { MetadataRoute } from "next";
 import urlJoin from "url-join";
 

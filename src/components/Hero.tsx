@@ -1,6 +1,6 @@
 "use client";
-import { config } from "@/config";
-import { cn } from "@/lib/utils";
+import { config } from "../config";
+import { cn } from "../lib/utils";
 import { FunctionComponent } from "react";
 
 interface HeroProps {

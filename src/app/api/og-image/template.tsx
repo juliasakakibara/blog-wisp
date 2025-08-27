@@ -1,4 +1,4 @@
-import { OpenGraphImageParams } from "@/lib/og-image";
+import { OpenGraphImageParams } from "../../../lib/og-image";
 import { ImageResponse } from "next/og";
 import type { FontMap } from "./fonts";
 

@@ -1,11 +1,11 @@
-import { BlogPostContent } from "@/components/BlogPostContent";
-import { CommentSection } from "@/components/CommentSection";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { RelatedPosts } from "@/components/RelatedPosts";
-import { config } from "@/config";
-import { signOgImageUrl } from "@/lib/og-image";
-import { wisp } from "@/lib/wisp";
+import { BlogPostContent } from "../../../components/BlogPostContent";
+import { CommentSection } from "../../../components/CommentSection";
+import { Footer } from "../../../components/Footer";
+import { Header } from "../../../components/Header";
+import { RelatedPosts } from "../../../components/RelatedPosts";
+import { config } from "../../../config";
+import { signOgImageUrl } from "../../../lib/og-image";
+import { wisp } from "../../../lib/wisp";
 import { notFound } from "next/navigation";
 import type { BlogPosting, WithContext } from "schema-dts";
 

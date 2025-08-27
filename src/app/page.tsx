@@ -1,9 +1,9 @@
-import { BlogPostsPreview } from "@/components/BlogPostPreview";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { config } from "@/config";
-import { wisp } from "@/lib/wisp";
+import { BlogPostsPreview } from "../components/BlogPostPreview";
+import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
+import { Hero } from "../components/Hero";
+import { config } from "../config";
+import { wisp } from "../lib/wisp";
 
 const Page = async () => {
   const result = await wisp.getPosts({ limit: 20 });

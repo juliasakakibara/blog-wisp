@@ -1,4 +1,4 @@
-import { verifyOgImageSignature } from "@/lib/og-image";
+import { verifyOgImageSignature } from "../../../lib/og-image";
 import type { NextRequest } from "next/server";
 import { loadFonts } from "./fonts";
 import { generateBannerImage } from "./template";

@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 import RSS from "rss";
 import urlJoin from "url-join";
 import { wisp } from "../../lib/wisp";
-import { config } from "@/config";
+import { config } from "../../config";
 
 const baseUrl = config.baseUrl;
 

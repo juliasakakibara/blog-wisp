@@ -1,8 +1,8 @@
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { config } from "@/config";
-import { signOgImageUrl } from "@/lib/og-image";
-import { wisp } from "@/lib/wisp";
+import { Footer } from "../../components/Footer";
+import { Header } from "../../components/Header";
+import { config } from "../../config";
+import { signOgImageUrl } from "../../lib/og-image";
+import { wisp } from "../../lib/wisp";
 import Link from "next/link";
 
 export async function generateMetadata() {

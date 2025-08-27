@@ -1,5 +1,5 @@
 "use client";
-import { GetPostResult } from "@/lib/wisp";
+import { GetPostResult } from "../lib/wisp";
 import Link from "next/link";
 import sanitize, { defaults } from "sanitize-html";
 

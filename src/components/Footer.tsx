@@ -1,5 +1,5 @@
 "use client";
-import { config } from "@/config";
+import { config } from "../config";
 import Link from "next/link";
 import { FunctionComponent } from "react";
 import { DarkModeToggle } from "./DarkModeToggle";

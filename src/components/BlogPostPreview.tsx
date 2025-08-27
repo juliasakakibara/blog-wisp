@@ -1,7 +1,7 @@
 "use client";
-import { cn } from "@/lib/utils";
-import { GetPostsResult } from "@/lib/wisp";
-import { config } from "@/config";
+import { cn } from "../lib/utils";
+import { GetPostsResult } from "../lib/wisp";
+import { config } from "../config";
 import Image from "next/image";
 import Link from "next/link";
 import { FunctionComponent } from "react";

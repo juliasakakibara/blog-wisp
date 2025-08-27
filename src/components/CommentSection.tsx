@@ -1,8 +1,8 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { wisp } from "@/lib/wisp";
-import { config } from "@/config";
+import { wisp } from "../lib/wisp";
+import { config } from "../config";
 import { CommentForm } from "./CommentForm";
 import { CommentList } from "./CommentList";
 
