@@ -1,7 +1,7 @@
 // components/BlotterText.tsx
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 
 declare global {
   interface Window {
@@ -28,7 +28,7 @@ export default function BlotterText({
   const [blotterError, setBlotterError] = useState(false);
 
   // Animação com easing
-  const animate = (start: number, end: number, onUpdate: (value: number) => void) => {
+  const animate = useCallback((start: number, end: number, onUpdate: (value: number) => void) => {
     if (animationRef.current) {
       cancelAnimationFrame(animationRef.current);
     }
@@ -47,7 +47,7 @@ export default function BlotterText({
       }
     };
     animationRef.current = requestAnimationFrame(update);
-  };
+  }, [duration]);
 
   // Efeito para o hover
   useEffect(() => {
@@ -56,7 +56,7 @@ export default function BlotterText({
     const targetValue = isHovered || alwaysOn ? volatility : 0;
     const currentValue = materialRef.current.uniforms.uVolatility.value;
     
-    animate(currentValue, targetValue, (value) => {
+    animate(currentValue, targetValue, (value: number) => {
       materialRef.current.uniforms.uVolatility.value = value;
     });
   }, [isHovered, alwaysOn, volatility, blotterError, animate]);

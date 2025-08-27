@@ -1,6 +1,4 @@
-@tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+/* Tailwind base, components e utilities são importados via configuração do Next.js */
 
   @layer base {
     :root {
@@ -66,15 +64,12 @@
     }
   }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
-
-    .blog-content img {
-      @apply w-full;
-    }
-  }
+/* Estilos globais sem @apply para evitar warnings no editor */
+body {
+  background-color: #fff;
+  color: #222;
+}
+.blog-content img {
+  width: 100%;
+  display: block;
+}
