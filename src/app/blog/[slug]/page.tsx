@@ -38,11 +38,11 @@ interface Params {
   slug: string;
 }
 
+import { useEffect } from "react";
+
 const Page = async (props: { params: Promise<Params> }) => {
   const params = await props.params;
-
   const { slug } = params;
-
   const result = await wisp.getPost(slug);
   const { posts } = await wisp.getRelatedPosts({ slug, limit: 3 });
 
@@ -50,8 +50,7 @@ const Page = async (props: { params: Promise<Params> }) => {
     return notFound();
   }
 
-  const { title, publishedAt, updatedAt, image, author } = result.post;
-
+  const { title, publishedAt, updatedAt, image, author, metadata } = result.post;
   const jsonLd: WithContext<BlogPosting> = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -65,6 +64,15 @@ const Page = async (props: { params: Promise<Params> }) => {
       image: author.image ?? undefined,
     },
   };
+
+  // Client-side effect para sobrescrever o CSS do body via metadata
+  if (typeof window !== "undefined" && metadata?.forceDarkMode) {
+    document.body.style.background = "#18181b";
+    document.body.style.color = "#fff";
+  } else if (typeof window !== "undefined") {
+    document.body.style.background = "";
+    document.body.style.color = "";
+  }
 
   return (
     <>

@@ -1,6 +1,10 @@
 "use client";
 import { GetPostResult } from "../lib/wisp";
 import Link from "next/link";
+import { ContentWithCustomComponents } from "@wisp-cms/react-custom-component";
+import { Heading } from "./Heading";
+import { GooeyText } from "./GooeyText";
+import { SimpleText } from "./SimpleText";
 import sanitize, { defaults } from "sanitize-html";
 
 export const PostContent = ({ content }: { content: string }) => {
@@ -48,10 +52,25 @@ export const PostContent = ({ content }: { content: string }) => {
     allowedIframeHostnames: ["www.youtube.com", "www.youtube-nocookie.com"],
   });
   return (
-    <div
-      className="blog-content mx-auto"
-      dangerouslySetInnerHTML={{ __html: sanitizedContent }}
-    ></div>
+    <>
+      {/* Adiciona estilo global para listas horizontais */}
+      <style>{`
+        .blog-content ul {
+          display: flex;
+          flex-direction: row;
+          gap: 1.5rem;
+          list-style: disc inside;
+          padding-left: 0;
+        }
+        .blog-content ul li {
+          margin: 0;
+        }
+      `}</style>
+      <div
+        className="blog-content mx-auto"
+        dangerouslySetInnerHTML={{ __html: sanitizedContent }}
+      />
+    </>
   );
 };
 
@@ -62,8 +81,14 @@ export const BlogPostContent = ({ post }: { post: GetPostResult["post"] }) => {
     <div>
       <div className="prose lg:prose-xl dark:prose-invert mx-auto lg:prose-h1:text-4xl mb-10 lg:mt-20 break-words">
         <h1>{title}</h1>
-        <PostContent content={content} />
-
+<ContentWithCustomComponents
+  content={content}
+  customComponents={{
+    Heading,
+    GooeyText,
+    SimpleText
+  }}
+/>
         <div className="mt-10 opacity-40 text-sm">
           {tags.map((tag) => (
             <Link
