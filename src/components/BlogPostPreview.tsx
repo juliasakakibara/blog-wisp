@@ -11,7 +11,7 @@ export const BlogPostPreview: FunctionComponent<{
 }> = ({ post }) => {
   return (
     <div className="break-words">
-      <Link href={`/blog/${post.slug}`} className="hover:opacity-80 transition-opacity">
+  <Link href={`/blog/${post.slug}`} className="hover:text-[#929292] transition-colors">
         <div className="aspect-[16/9] relative">
           <Image
             alt={post.title}

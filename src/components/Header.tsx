@@ -54,7 +54,7 @@ export const Navigation: FunctionComponent = () => {
 
   // Menu items configurados
   const menuItems: MenuItem[] = [
-    { name: "/feature projects", href: "#work" },
+  { name: "/feature projects", href: "/#work" },
     { name: "/about", href: "/about" }
   ];
 
@@ -63,16 +63,16 @@ export const Navigation: FunctionComponent = () => {
       <div className="hidden md:flex items-center">
         {menuItems.map((item) => (
           <div key={item.href} className="ml-4 md:ml-8">
-            <a
+            <Link
               href={item.href}
-              target={item.openInNewTab ? "_blank" : "_self"}
+              scroll={true}
               className={cn(
-                "hover:text-[#929292] font-semibold",
+                "font-semibold text-[#232323] dark:text-[#eaeaea] hover:text-[#929292] dark:hover:text-[#929292]",
                 pathname === item.href && "font-semibold"
               )}
             >
               {item.name}
-            </a>
+            </Link>
           </div>
         ))}
       </div>
@@ -86,17 +86,17 @@ export const Navigation: FunctionComponent = () => {
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <SheetDescription>
                 {menuItems.map((item) => (
-                  <a
+                  <Link
                     key={item.href}
                     href={item.href}
-                    target={item.openInNewTab ? "_blank" : "_self"}
+                    scroll={true}
                     className={cn(
-                      "block py-2 font-semibold",
+                      "block py-2 font-semibold text-[#232323] dark:text-[#eaeaea] hover:text-[#929292] dark:hover:text-[#929292]",
                       pathname === item.href && "font-semibold"
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </SheetDescription>
             </SheetHeader>
@@ -118,9 +118,9 @@ export const Header: FunctionComponent = () => {
   );
 
   const titleClasses = cn(
-    config.header.titleSize.mobile,
-    `md:${config.header.titleSize.desktop}`,
-    "font-bold tracking-tighter leading-tight"
+  config.header.titleSize.mobile,
+  `md:${config.header.titleSize.desktop}`,
+  "font-bold tracking-tighter leading-tight text-[#232323] dark:text-[#eaeaea]"
   );
 
   return (
