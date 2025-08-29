@@ -4,14 +4,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint",
-  "format": "prettier --write .",
-  "type-check": "tsc --noEmit",
-  "clean": "rm -rf node_modules package-lock.json .next",
-  "test": "echo 'No test script defined'"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf node_modules package-lock.json .next",
+    "test": "echo 'No test script defined'"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -54,7 +54,7 @@
     "@types/react-dom": "19.0.3",
     "@types/rss": "^0.0.32",
     "@types/three": "^0.176.0",
-  "eslint": "^8.57.0",
+    "eslint": "^8.57.0",
     "eslint-config-next": "^15.5.2",
     "postcss": "^8",
     "schema-dts": "^1.1.2",
